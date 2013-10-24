@@ -5,8 +5,30 @@
     <title>Race Recorder</title>
     <link rel="stylesheet" href="css/app.css"/>
     <script>
-        function PostsCtrlAjax($scope, $http) {
+        function GeneralEventCtrl($scope, $http) {
+            $http({method: 'GET', url: '/py/api/v1/event_driver'}).success(function (data) {
+                function sortByTimeN_1(a, b) {
+                    return a.time_n - b.time_n
+                }
+
+                var results = data.event_drivers.sort(sortByTimeN_1);
+                $scope.results = results; // response data
+            });
+        }
+
+        function TrialDriverS1Ctrl($scope, $http) {
             $http({method: 'GET', url: '/py/api/v1/trial_driver/?trial=1'}).success(function (data) {
+                function sortByTimeN_1(a, b) {
+                    return a.time_n - b.time_n
+                }
+
+                var results = data.trial_drivers.sort(sortByTimeN_1);
+                $scope.results = results; // response data
+            });
+        }
+
+        function TrialDriverS2Ctrl($scope, $http) {
+            $http({method: 'GET', url: '/py/api/v1/trial_driver/?trial=2'}).success(function (data) {
                 function sortByTimeN_1(a, b) {
                     return a.time_n - b.time_n
                 }

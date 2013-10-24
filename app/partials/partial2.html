@@ -1,20 +1,22 @@
-<!--<div id="container">-->
+<div ng-controller="TrilaDriverS2Ctrl">
+
     <table class="zebra">
         <thead>
         <tr>
-            <th>Date</th>
-            <th>Start time</th>
-            <th>End time</th>
-            <th>Name</th>
+            <th>Numer startowy</th>
+            <th>Kierowca</th>
+            <th>Czas N-1</th>
+            <th>Najlepszy czas</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>02.06.2010</td>
-            <td>10:00</td>
-            <td>12:00</td>
-            <td>Cleaning</td>
+        <tr ng-repeat="result in results">
+            <td>{{result.start_number}}</td>
+            <td>{{result.last_name}} {{result.first_name}}</td>
+            <td>{{result.time_n_minus_1|toHumanReadableFormat}}</td>
+            <td>{{result.time_n|toHumanReadableFormat}}</td>
         </tr>
         </tbody>
     </table>
-<!--</div>-->
+
+</div>

@@ -30,10 +30,10 @@ angular.module('myApp', [
         }
     }).
     config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/view0', {templateUrl: 'partials/partial0.html', controller: 'GeneralEventCtrl'});
-        $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'TrialDriverS1Ctrl'});
-        $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'TrialDriverS2Ctrl'});
-        $routeProvider.otherwise({redirectTo: '/view1'});
+        $routeProvider.when('/generalka', {templateUrl: 'partials/partial0.html', controller: 'GeneralEventCtrl'});
+        $routeProvider.when('/proba1', {templateUrl: 'partials/partial1.html', controller: 'TrialDriverS1Ctrl'});
+        $routeProvider.when('/proba2', {templateUrl: 'partials/partial2.html', controller: 'TrialDriverS2Ctrl'});
+        $routeProvider.otherwise({redirectTo: '/generalka'});
     }]);
 
 

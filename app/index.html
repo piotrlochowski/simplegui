@@ -11,7 +11,10 @@
                     return a.time_n - b.time_n
                 }
 
-                var results = data.event_drivers.sort(sortByTimeN_1);
+                var results = data.event_drivers.sort(sortByTimeN_1).filter(function (result) {
+                    if (result.time_n)
+                        return result
+                });
                 $scope.results = results; // response data
             });
         }
@@ -22,7 +25,10 @@
                     return a.time_n - b.time_n
                 }
 
-                var results = data.trial_drivers.sort(sortByTimeN_1);
+                var results = data.trial_drivers.sort(sortByTimeN_1).filter(function (result) {
+                    if (result.time_n)
+                        return result
+                });
                 $scope.results = results; // response data
             });
         }
@@ -33,7 +39,10 @@
                     return a.time_n - b.time_n
                 }
 
-                var results = data.trial_drivers.sort(sortByTimeN_1);
+                var results = data.trial_drivers.sort(sortByTimeN_1).filter(function (result) {
+                    if (result.time_n)
+                        return result
+                });
                 $scope.results = results; // response data
             });
         }

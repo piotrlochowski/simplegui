@@ -20,11 +20,11 @@ angular.module('myApp', [
                 return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
             }
 
-            millisec = String(input).slice(-3);
+            millisec = pad(Math.floor(input % 1000), 3, 0);
             input /= 1000;
-            seconds = pad(Math.round(input % 60), 2, 0);
+            seconds = pad(Math.floor(input % 60), 2, 0);
             input /= 60;
-            minutes = (input % 60).toFixed(0);
+            minutes = pad(Math.floor(input % 60), 2, 0);
             console.log("seconds:", seconds);
             return [minutes, seconds, millisec].join(':')
         }

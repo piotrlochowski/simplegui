@@ -29,8 +29,8 @@ angular.module('myApp', [
     }).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/generalka', {templateUrl: 'partials/partial0.html'});
-        $routeProvider.when('/proba1', {templateUrl: 'partials/partial1.html', controller: 'TrialDriverS1Ctrl'});
-        $routeProvider.when('/proba2', {templateUrl: 'partials/partial2.html', controller: 'TrialDriverS2Ctrl'});
+        $routeProvider.when('/proba1', {templateUrl: 'partials/partial1.html'});
+        $routeProvider.when('/proba2', {templateUrl: 'partials/partial2.html'});
         $routeProvider.otherwise({redirectTo: '/generalka'});
     }]);
 

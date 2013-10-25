@@ -114,7 +114,7 @@ blockquote {
 }
 
 #menu li a:hover {
-    background: #FF5938;
+    border: 1px solid #FF5938;
 }
 
 #menu li a.current {

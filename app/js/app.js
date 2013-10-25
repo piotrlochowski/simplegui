@@ -11,8 +11,7 @@ angular.module('myApp', [
     ]).
     filter('toHumanReadableFormat',function () {
         return function (input) {
-            var seconds, minutes = 0;
-            var millisec
+            var millisec, seconds, minutes = 0;
 
             function pad(n, width, z) {
                 z = z || '0';
@@ -29,7 +28,7 @@ angular.module('myApp', [
         }
     }).
     config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/generalka', {templateUrl: 'partials/partial0.html', controller: 'GeneralEventCtrl'});
+        $routeProvider.when('/generalka', {templateUrl: 'partials/partial0.html'});
         $routeProvider.when('/proba1', {templateUrl: 'partials/partial1.html', controller: 'TrialDriverS1Ctrl'});
         $routeProvider.when('/proba2', {templateUrl: 'partials/partial2.html', controller: 'TrialDriverS2Ctrl'});
         $routeProvider.otherwise({redirectTo: '/generalka'});

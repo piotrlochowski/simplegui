@@ -25,7 +25,6 @@ angular.module('myApp', [
             seconds = pad(Math.floor(input % 60), 2, 0);
             input /= 60;
             minutes = pad(Math.floor(input % 60), 2, 0);
-            console.log("seconds:", seconds);
             return [minutes, seconds, millisec].join(':')
         }
     }).

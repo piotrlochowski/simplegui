@@ -1,252 +1,266 @@
 /* Created by Igor Penjivrag (www.colorlightstudio.com) - 12.11.2006 */
 
+
 body {
-    margin: 0px;
-    background: url(img/top_bg.gif);
-    background-repeat: repeat-x;
-    font-family: Verdana, Arial, sans-serif;
-    font-size: .6em;
+	margin: 0px;
+	background: url(img/top_bg.gif);
+	background-repeat: repeat-x;
+	font-family: Verdana, Arial, sans-serif;
+        font-size: .6em;
 }
 
 p {
-    line-height: 17px;
-    margin: 11px 0 10px 0;
-    padding: 0px;
+	line-height: 17px;
+	margin: 11px 0 10px 0;
+	padding: 0px;
 }
 
 h2 {
-    color: #73353A;
-    margin: 0px;
-    padding: 0px;
-    font-size: 15px;
+	color: #73353A;
+	margin:0px;
+	padding:0px;
+	font-size: 15px;
 }
 
 ul {
-    font-size: 10px;
-    margin: 0;
-    padding: 0;
-    list-style-image: url(img/bullet.gif);
+	font-size: 10px;
+	margin:0;
+	padding:0;
+	list-style-image: url(img/bullet.gif);
 }
 
 a {
-    color: #8B0000;
+	color: #8B0000;
 }
 
 a:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
-blockquote {
-    background: #F7FDE3;
-    color: #606060;
-    padding: 10px;
+blockquote{
+	background: #F7FDE3;
+	color: #606060;
+	padding: 10px;
 }
+
 
 /**** Main Container ***/
 
+
 #wrap {
-    margin-left: auto;
-    margin-right: auto;
-    width: 730px;
+       margin-left: auto;
+       margin-right: auto;
+       width: 730px;
 }
+
 
 /**** Top ***/
 
+
 #top {
-    width: 100%;
-    height: 88px;
-    color: #fff;
-    background: #000 url(img/top_bg.gif);
-    overflow: hidden;
+	width: 100%;
+	height: 88px;
+	color: #fff;
+	background: #000 url(img/top_bg.gif);
+	overflow:hidden;
 }
 
 #top h2 {
-    color: White;
-    letter-spacing: 3px;
-    font-size: 2.4em;
-    font-weight: normal;
-    position: relative;
-    margin: 0px;
-    top: 33px;
-    display: block;
-    float: right;
-    background: url(img/logo.jpg) no-repeat;
-    padding-right: 40px;
+	color: White;
+	letter-spacing: 3px;
+	font-size: 2.4em;
+	font-weight: normal;
+	position: relative;
+	margin: 0px;
+	top:33px;
+	display:block;
+	float:right;
+	padding-right: 40px;
 }
 
 #top h2 a {
-    color: white;
-    text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 
 #top h2 a:hover {
-    color: #FF5938;
+        color: #FF5938;
 }
+
 
 /**** Main Menu ***/
 
+
 #menu {
-    display: block;
-    float: left;
+	display: block;
+	float:left;
     padding-left: 20px;
 }
 
 #menu ul {
-    margin: 0;
-    list-style: none;
+	margin: 0;
+	list-style: none;
 }
 
 #menu li {
-    display: block;
-    float: left;
-    white-space: nowrap;
+	display: block;
+	float: left;
+	white-space: nowrap;
     /*font-size: large;*/
 }
 
 #menu li a {
-    display: block;
-    padding: 55px 20px 12px 20px;
-    text-decoration: none;
-    color: #fff;
+	display: block;
+	padding: 55px 20px 12px 20px;
+	text-decoration: none;
+	color: #fff;
 }
 
-* html #menu a {
-    width: 1%;
-}
+* html #menu a {width:1%;}
 
 #menu li a:hover {
-    background: #FF5938;
+	background: #FF5938;
 }
 
 #menu li a.current {
-    letter-spacing: 1px;
-    color: gray;
+	letter-spacing: 1px;
+	color: gray;
 }
 
 #menu li a.current:hover {
-    color: #fff;
+	color: #fff;
 }
+
 
 /**** Content Container ***/
 
+
 #content {
-    width: 100%;
-    /*margin-top:30px;*/
+	width: 100%;
+	/*margin-top:30px;*/
 }
 
 #content h2 {
-    margin: 0;
-    padding: 10px 0 10px 0;
+	margin: 0;
+	padding: 10px 0 10px 0;
 }
+
 
 /**** Content ***/
 
+
 #left ul {
-    padding: 15px 0 15px 35px;
-    margin: 0;
+	padding: 15px 0 15px 35px;
+	margin:0;
 }
 
 #left li {
-    margin-bottom: 5px;
+	margin-bottom:5px;
 }
 
 #left {
-    width: 350px;
-    float: left;
-    display: block;
-    margin-left: 20px;
-    display: inline;
+	width: 350px;
+	float:left;
+	display: block;
+        margin-left: 20px;
+	display: inline;
 }
+
 
 /**** Sidebar ***/
 
+
 #right {
-    width: 315px;
-    float: right;
-    display: block;
-    margin-top: 10px;
+	width: 315px;
+	float: right;
+	display:block;
+	margin-top: 10px;
 }
 
 #right .box {
-    width: 280px;
-    background: #F6F9FB;
-    border: 1px solid #E1E1E1;
-    padding: 10px 10px 15px 10px;
-    float: right;
+	width: 280px;
+	background: #F6F9FB;
+	border: 1px solid #E1E1E1;
+	padding:10px 10px 15px 10px;
+	float: right;
 }
 
 #right .box h2 {
-    font-size: 1.1em;
-    margin: 0px 0 0px 0;
-    padding: 0px 0 5px 0;
+	font-size: 1.1em;
+	margin: 0px 0 0px 0;
+	padding:0px 0 5px 0;
 }
 
 #right .box a {
-    margin: 10px 0 10px 0;
-    color: #56677C;
-    font-size: 10px;
+	margin: 10px 0 10px 0;
+	color: #56677C;
+	font-size: 10px;
 }
 
 #right .box p {
-    margin: 5px 0 10px 0;
-    line-height: 15px;
+	margin: 5px 0 10px 0;
+	line-height: 15px;
 }
 
 #right .box ul {
-    padding: 0 0 7px 20px;
-    margin: 10px 0 10px 0;
+	padding: 0 0 7px 20px;
+	margin:10px 0 10px 0;
 }
 
 #right .box li {
-    margin-top: 5px;
+	margin-top:5px;
 }
+
 
 /**** Clear Div ***/
 
+
 #clear {
-    display: block;
-    clear: both;
-    width: 100%;
-    height: 1px;
-    overflow: hidden;
+	display: block;
+	clear: both;
+	width: 100%;
+	height:1px;
+	overflow:hidden;
 }
+
 
 /**** Footer ***/
 
+
 #footer {
-    margin: 40px auto 0 auto;
-    text-align: center;
-    border-top: dotted 1px gray;
-    padding: 20px 0 20px 0;
-    width: 70%;
+        margin: 40px auto 0 auto;
+	text-align: center;
+	border-top: dotted 1px gray;
+	padding: 20px 0 20px 0;
+	width: 70%;
 }
 
 #footer p {
-    margin: 0px;
-    padding: 0;
+	margin: 0px;
+	padding: 0;
 }
 
 /*.zebra caption{*/
-/*font-size:20px;*/
-/*font-weight:normal;*/
-/*background:url(../img/zebratable.png);*/
-/*background-repeat:no-repeat;*/
-/*background-position: 130px center;*/
-/*padding-top: 20px;*/
-/*height:50px;}*/
+	/*font-size:20px;*/
+	/*font-weight:normal;*/
+	/*background:url(../img/zebratable.png);*/
+	/*background-repeat:no-repeat;*/
+	/*background-position: 130px center;*/
+	/*padding-top: 20px;*/
+	/*height:50px;}*/
 
-#container {
-    padding-top: 20px;
-    width: 960px;
-    margin: 0 auto;
+#container{
+	padding-top:20px;
+	width:960px;
+	margin:0 auto;
 }
 
 table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
-    -webkit-box-shadow: 0px 2px 1px 5px rgba(242, 242, 242, 0.1);
-    box-shadow: 0px 2px 1px 5px rgba(242, 242, 242, 0.1);
+	width:100%;
+	-webkit-box-shadow:  0px 2px 1px 5px rgba(242, 242, 242, 0.1);
+    box-shadow:  0px 2px 1px 5px rgba(242, 242, 242, 0.1);
 }
 
 .zebra {
@@ -262,39 +276,30 @@ table {
 
 .zebra th, .zebra th:hover {
     border-left: 1px solid #555;
-    border-bottom: 1px solid #828282;
+	border-bottom: 1px solid #828282;
     padding: 20px;
-    background-color: #151515 !important;
+    background-color:#151515 !important;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#151515), to(#404040)) !important;
     background-image: -webkit-linear-gradient(top, #151515, #404040) !important;
-    background-image: -moz-linear-gradient(top, #151515, #404040) !important;
-    background-image: -ms-linear-gradient(top, #151515, #404040) !important;
-    background-image: -o-linear-gradient(top, #151515, #404040) !important;
-    background-image: linear-gradient(top, #151515, #404040) !important;
-    color: #fff !important;
-    font-weight: normal;
+    background-image:    -moz-linear-gradient(top, #151515, #404040) !important;
+    background-image:     -ms-linear-gradient(top, #151515, #404040) !important;
+    background-image:      -o-linear-gradient(top, #151515, #404040) !important;
+    background-image:         linear-gradient(top, #151515, #404040) !important;
+	color:#fff !important;
+	font-weight:normal;
 }
 
 .zebra tbody tr:nth-child(even) {
     background: #000 !important;
-    color: #fff;
+	color:#fff;
 }
 
-.zebra tr:hover * {
+.zebra tr:hover *{
     background: #eeeeee;
-    color: #000;
+	color:#000;
 }
 
 .zebra tr {
-    background: #404040;
-    color: #fff;
-}
-
-label {
-    display: block;
-    float: left;
-}
-
-label:after {
-    content: ": "
+	background:#404040;
+	color:#fff;
 }

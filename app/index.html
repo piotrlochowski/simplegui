@@ -5,15 +5,24 @@
     <title>Race Recorder</title>
     <link rel="stylesheet" href="css/app.css"/>
     <script>
+//        WTF?!!! refactor to dependency injection and reduce code duplication
         function GeneralEventCtrl($route, $scope, $http) {
             $scope.data = {refresh: false}
             var loadEventResults = function () {
                 $http({method: 'GET', url: '/py/api/v1/event_driver'}).success(function (data) {
                     function sortByTimeN_1(a, b) {
-                        return a.time_n - b.time_n
+                        if (a.time_n_minus_1 == 0) {
+                            a.time_n_minus_1 = 3600000
+                        }
+                        if (b.time_n_minus_1 == 0) {
+                            b.time_n_minus_1 = 3600000
+                        }
+                        return a.time_n_minus_1 - b.time_n_minus_1
                     }
-
-                    var results = data.event_drivers.sort(sortByTimeN_1).filter(function (result) {
+                    function sortByLaps(a, b) {
+                        return b.laps - a.laps
+                    }
+                    var results = data.event_drivers.sort(sortByTimeN_1).sort(sortByLaps).filter(function (result) {
                         if (result.time_n)
                             return result
                     });
@@ -23,7 +32,7 @@
             setInterval(function () {
                 if ($scope.data.refresh === true && $route.current['loadedTemplateUrl'] === 'partials/partial0.html') {
                     loadEventResults()
-                    console.log('Update generalki dla',$route.current['loadedTemplateUrl'])
+                    console.log('Update generalki dla', $route.current['loadedTemplateUrl'])
                 }
                 ;
             }, 2000)
@@ -35,10 +44,24 @@
             var loadTrialDriverS1 = function () {
                 $http({method: 'GET', url: '/py/api/v1/trial_driver/?trial=1'}).success(function (data) {
                     function sortByTimeN_1(a, b) {
+                        if (a.time_n_minus_1 == 0) {
+                            a.time_n_minus_1 = 3600000
+                        }
+                        if (b.time_n_minus_1 == 0) {
+                            b.time_n_minus_1 = 3600000
+                        }
+                        return a.time_n_minus_1 - b.time_n_minus_1
+                    }
+
+                    function sortByTimeN(a, b) {
                         return a.time_n - b.time_n
                     }
 
-                    var results = data.trial_drivers.sort(sortByTimeN_1).filter(function (result) {
+                    function sortByLaps(a, b) {
+                        return b.laps - a.laps
+                    }
+
+                    var results = data.trial_drivers.sort(sortByTimeN).sort(sortByTimeN_1).sort(sortByLaps).filter(function (result) {
                         if (result.time_n)
                             return result
                     });
@@ -48,7 +71,7 @@
             setInterval(function () {
                 if ($scope.data.refresh === true && $route.current['loadedTemplateUrl'] === 'partials/partial1.html') {
                     loadTrialDriverS1()
-                    console.log('Update generalki dla',$route.current['loadedTemplateUrl'])
+                    console.log('Update generalki dla', $route.current['loadedTemplateUrl'])
                 }
                 ;
             }, 2000)
@@ -59,20 +82,35 @@
             $scope.data = {refresh: false}
             var loadTrialDriver21 = function () {
                 $http({method: 'GET', url: '/py/api/v1/trial_driver/?trial=2'}).success(function (data) {
-                function sortByTimeN_1(a, b) {
-                    return a.time_n - b.time_n
-                }
+                    function sortByTimeN_1(a, b) {
+                        if (a.time_n_minus_1 == 0) {
+                            a.time_n_minus_1 = 3600000
+                        }
+                        if (b.time_n_minus_1 == 0) {
+                            b.time_n_minus_1 = 3600000
+                        }
+                        return a.time_n_minus_1 - b.time_n_minus_1
+                    }
 
-                var results = data.trial_drivers.sort(sortByTimeN_1).filter(function (result) {
-                    if (result.time_n)
-                        return result
+                    function sortByTimeN(a, b) {
+                        return a.time_n - b.time_n
+                    }
+
+                    function sortByLaps(a, b) {
+                        return b.laps - a.laps
+                    }
+
+                    var results = data.trial_drivers.sort(sortByTimeN).sort(sortByTimeN_1).sort(sortByLaps).filter(function (result) {
+                        if (result.time_n)
+                            return result
+                    });
+                    $scope.results = results; // response data
                 });
-                $scope.results = results; // response data
-            });}
+            }
             setInterval(function () {
                 if ($scope.data.refresh === true && $route.current['loadedTemplateUrl'] === 'partials/partial2.html') {
                     loadTrialDriver21()
-                    console.log('Update generalki dla',$route.current['loadedTemplateUrl'])
+                    console.log('Update generalki dla', $route.current['loadedTemplateUrl'])
                 }
                 ;
             }, 2000)

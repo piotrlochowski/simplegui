@@ -4,16 +4,20 @@
         <input id="refresh"  type="checkbox" ng-model="data.refresh"/>
         <thead>
         <tr>
+            <th>Miejsce</th>
             <th>Numer startowy</th>
             <th>Kierowca</th>
+            <th>Przejazdów</th>
             <th>Czas N-1</th>
             <th>Najlepszy czas</th>
         </tr>
         </thead>
         <tbody>
         <tr ng-repeat="result in results">
+            <td>{{$index+1}}</td>
             <td>{{result.start_number}}</td>
             <td>{{result.last_name}} {{result.first_name}}</td>
+            <td>{{result.laps}}</td>
             <td>{{result.time_n_minus_1|toHumanReadableFormat}}</td>
             <td>{{result.time_n|toHumanReadableFormat}}</td>
         </tr>

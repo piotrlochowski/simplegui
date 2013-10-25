@@ -18,7 +18,8 @@ angular.module('myApp', [
                 n = n + '';
                 return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
             }
-
+            if (input === 3600000)
+                return 'n/a'
             millisec = pad(Math.floor(input % 1000), 3, 0);
             input /= 1000;
             seconds = pad(Math.floor(input % 60), 2, 0);

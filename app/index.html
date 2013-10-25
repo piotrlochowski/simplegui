@@ -99,11 +99,11 @@
     <div id="top">
         <h2><a>Race Recorder - Wyrazów</a></h2>
 
-        <div id="menu">
+        <div id="menu" ng-controller="Activation">
             <ul>
-                <li><a href="#/generalka">Generalka</a></li>
-                <li><a href="#/proba1">Próba 1</a></li>
-                <li><a href="#/proba2">Próba 2</a></li>
+                <li><a data-ng-class="{active:isActive('/generalka')}" href="#/generalka">Generalka</a></li>
+                <li><a data-ng-class="{active:isActive('/proba1')}" href="#/proba1">Próba 1</a></li>
+                <li><a data-ng-class="{active:isActive('/proba2')}" href="#/proba2">Próba 2</a></li>
             </ul>
         </div>
     </div>

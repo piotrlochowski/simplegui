@@ -297,3 +297,7 @@ label {
 label:after {
     content: ": "
 }
+
+li .active {
+    background: #FF5938;
+}

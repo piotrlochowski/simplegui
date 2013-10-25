@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/app.css"/>
     <script>
 
+        var auto_refresh = 10000
+
         function sortByTimeN_1(a, b) {
             if (a.time_n_minus_1 == 0) {
                 a.time_n_minus_1 = 3600000
@@ -43,7 +45,7 @@
                     console.log('Update generalki dla', $route.current['loadedTemplateUrl'])
                 }
                 ;
-            }, 2000)
+            }, auto_refresh)
             loadEventResults()
         }
 
@@ -65,7 +67,7 @@
                     console.log('Update generalki dla', $route.current['loadedTemplateUrl'])
                 }
                 ;
-            }, 2000)
+            }, auto_refresh)
             loadTrialDriverS1()
         }
 
@@ -87,7 +89,7 @@
                     console.log('Update generalki dla', $route.current['loadedTemplateUrl'])
                 }
                 ;
-            }, 2000)
+            }, auto_refresh)
             loadTrialDriver21()
         }
     </script>

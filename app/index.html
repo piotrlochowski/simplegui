@@ -9,13 +9,13 @@
         var auto_refresh = 10000
 
         function sortByTimeN_1(a, b) {
-            if (a.time_n_minus_1 == 0) {
-                a.time_n_minus_1 = 3600000
+            if (a.time_sum == 0) {
+                a.time_sum = 3600000
             }
-            if (b.time_n_minus_1 == 0) {
-                b.time_n_minus_1 = 3600000
+            if (b.time_sum == 0) {
+                b.time_sum = 3600000
             }
-            return a.time_n_minus_1 - b.time_n_minus_1
+            return a.time_sum - b.time_sum
         }
 
         function sortByTimeN(a, b) {

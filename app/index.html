@@ -33,7 +33,7 @@
                 $http({method: 'GET', url: '/py/api/v1/event_driver'}).success(function (data) {
 
                     var results = data.event_drivers.sort(sortByTimeSum).sort(sortByLaps).filter(function (result) {
-                        if (result.time_n)
+                        if (result.time_n && result.laps===6)
                             return result
                     });
                     $scope.results = results; // response data

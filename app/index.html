@@ -32,7 +32,7 @@
             var loadEventResults = function () {
                 $http({method: 'GET', url: '/py/api/v1/event_driver'}).success(function (data) {
 
-                    var results = data.event_drivers.sort(sortByTimeSum).sort(sortByLaps).filter(function (result) {
+                    var results = data.event_drivers.sort(sortByTimeSum).filter(function (result) {
                         if (result.time_n && result.laps===6)
                             return result
                     });

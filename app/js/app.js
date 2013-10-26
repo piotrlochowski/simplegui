@@ -25,7 +25,7 @@ angular.module('myApp', [
             seconds = pad(Math.floor(input % 60), 2, 0);
             input /= 60;
             minutes = pad(Math.floor(input % 60), 2, 0);
-            return [minutes, seconds, millisec].join(':')
+            return [[minutes, seconds].join(':'), millisec].join('.')
         }
     }).
     config(['$routeProvider', function ($routeProvider) {

@@ -8,7 +8,7 @@
 
         var auto_refresh = 10000
 
-        function sortByTimeN_1(a, b) {
+        function sortByTimeSum(a, b) {
             if (a.time_sum == 0) {
                 a.time_sum = 3600000
             }
@@ -32,7 +32,7 @@
             var loadEventResults = function () {
                 $http({method: 'GET', url: '/py/api/v1/event_driver'}).success(function (data) {
 
-                    var results = data.event_drivers.sort(sortByTimeN_1).sort(sortByLaps).filter(function (result) {
+                    var results = data.event_drivers.sort(sortByTimeSum).filter(function (result) {
                         if (result.time_n)
                             return result
                     });
@@ -54,7 +54,7 @@
             var loadTrialDriverS1 = function () {
                 $http({method: 'GET', url: '/py/api/v1/trial_driver/?trial=1'}).success(function (data) {
 
-                    var results = data.trial_drivers.sort(sortByTimeN).sort(sortByTimeN_1).sort(sortByLaps).filter(function (result) {
+                    var results = data.trial_drivers.sort(sortByTimeSum).filter(function (result) {
                         if (result.time_n)
                             return result
                     });
@@ -76,7 +76,7 @@
             var loadTrialDriver21 = function () {
                 $http({method: 'GET', url: '/py/api/v1/trial_driver/?trial=2'}).success(function (data) {
 
-                    var results = data.trial_drivers.sort(sortByTimeN).sort(sortByTimeN_1).sort(sortByLaps).filter(function (result) {
+                    var results = data.trial_drivers.sort(sortByTimeN).sort(sortByTimeSum).sort(sortByLaps).filter(function (result) {
                         if (result.time_n)
                             return result
                     });

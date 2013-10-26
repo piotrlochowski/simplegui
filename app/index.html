@@ -76,7 +76,7 @@
             var loadTrialDriver21 = function () {
                 $http({method: 'GET', url: '/py/api/v1/trial_driver/?trial=2'}).success(function (data) {
 
-                    var results = data.trial_drivers.sort(sortByTimeN).sort(sortByTimeSum).sort(sortByLaps).filter(function (result) {
+                    var results = data.trial_drivers.sort(sortByTimeSum).filter(function (result) {
                         if (result.time_n)
                             return result
                     });

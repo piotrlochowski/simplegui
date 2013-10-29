@@ -47,7 +47,7 @@ blockquote {
 #wrap {
     margin-left: auto;
     margin-right: auto;
-    width: 730px;
+    width: 780px;
 }
 
 /**** Top ***/
@@ -234,11 +234,11 @@ blockquote {
 /*padding-top: 20px;*/
 /*height:50px;}*/
 
-#container {
-    padding-top: 20px;
-    width: 960px;
-    margin: 0 auto;
-}
+/*#container {*/
+    /*padding-top: 20px;*/
+    /*width: 960px;*/
+    /*margin: 0 auto;*/
+/*}*/
 
 table {
     border-collapse: collapse;
